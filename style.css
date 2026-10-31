@@ -1,0 +1,57 @@
+/* Token Cost Receipt — SillyTavern theme variables */
+.mari-token-receipt-message-button[aria-expanded="true"] { opacity: 1; color: var(--SmartThemeQuoteColor); }
+
+#mari-token-receipt[hidden] { display: none; }
+#mari-token-receipt {
+  position: fixed; z-index: 9998; display: flex; flex-direction: column;
+  width: min(360px, calc(100vw - 24px)); max-height: min(78vh, 640px);
+  color: var(--SmartThemeBodyColor);
+  background-color: var(--SmartThemeBlurTintColor);
+  backdrop-filter: blur(calc(var(--SmartThemeBlurStrength, 10px) * 2));
+  border: 1px solid var(--SmartThemeBorderColor); border-radius: 12px;
+  box-shadow: 0 14px 42px rgba(5, 3, 18, .55);
+  font: 12px/1.45 var(--mainFontFamily, system-ui, sans-serif); overflow: hidden;
+}
+#mari-token-receipt * { box-sizing: border-box; }
+#mari-token-receipt .tr-head { display: flex; flex: 0 0 auto; align-items: center; gap: 6px; padding: 9px 10px 9px 12px; border-bottom: 1px solid var(--SmartThemeBorderColor); font-weight: 700; }
+#mari-token-receipt .tr-head span { margin-right: auto; }
+#mari-token-receipt button { border: 1px solid var(--SmartThemeBorderColor); background: var(--black30a, rgba(0,0,0,.3)); color: inherit; border-radius: 7px; padding: 5px 8px; cursor: pointer; font: inherit; }
+#mari-token-receipt button:hover { background: var(--white20a, rgba(255,255,255,.2)); }
+#mari-token-receipt .tr-icon-btn { display: grid; width: 28px; height: 28px; place-items: center; border-color: transparent; background: transparent; padding: 0; font-size: 15px; }
+#mari-token-receipt .tr-icon-btn:hover, #mari-token-receipt .tr-icon-btn[aria-pressed="true"] { border-color: var(--SmartThemeBorderColor); background: var(--black30a, rgba(0,0,0,.3)); }
+#mari-token-receipt .tr-icon-btn:focus-visible { outline: 2px solid var(--SmartThemeQuoteColor); outline-offset: 1px; }
+#mari-token-receipt .tr-body { min-height: 0; flex: 1; padding: 12px; overflow: auto; overscroll-behavior: contain; }
+#mari-token-receipt .tr-muted { opacity: .67; }
+#mari-token-receipt .tr-title { font-size: 13px; font-weight: 700; word-break: break-all; margin-bottom: 8px; }
+#mari-token-receipt .tr-row { display: flex; justify-content: space-between; gap: 12px; padding: 3px 0; }
+#mari-token-receipt .tr-usage { display: grid; grid-template-columns: minmax(0,1fr) 82px auto; align-items: baseline; gap: 8px; }
+#mari-token-receipt .tr-tokens { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+#mari-token-receipt .tr-total { border-top: 1px solid var(--SmartThemeBorderColor); margin-top: 7px; padding-top: 8px; font-weight: 800; font-size: 14px; }
+#mari-token-receipt details { margin-top: 10px; border-top: 1px solid var(--SmartThemeBorderColor); padding-top: 8px; }
+#mari-token-receipt summary { cursor: pointer; }
+#mari-token-receipt input, #mari-token-receipt select { width: 100%; margin: 3px 0 7px; padding: 6px; border: 1px solid var(--SmartThemeBorderColor); border-radius: 7px; background: var(--black30a, rgba(0,0,0,.3)); color: inherit; font: inherit; }
+#mari-token-receipt select option, #mari-token-receipt select optgroup { background: var(--SmartThemeBlurTintColor); color: var(--SmartThemeBodyColor); }
+#mari-token-receipt input[type="checkbox"] { width: 16px; height: 16px; margin: 0; flex: 0 0 auto; accent-color: var(--SmartThemeQuoteColor); }
+#mari-token-receipt .tr-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 8px; }
+#mari-token-receipt .tr-preset { display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: end; gap: 8px; margin: 8px 0; }
+#mari-token-receipt .tr-preset select { margin-bottom: 0; }
+#mari-token-receipt .tr-preset button { min-height: 31px; white-space: nowrap; }
+#mari-token-receipt label { display: block; font-size: 11px; opacity: .82; }
+#mari-token-receipt .tr-toggle { display: flex; align-items: flex-start; gap: 9px; padding: 8px 0; border-bottom: 1px solid var(--SmartThemeBorderColor); opacity: 1; }
+#mari-token-receipt .tr-toggle span { display: grid; gap: 2px; }
+#mari-token-receipt .tr-toggle small { color: var(--SmartThemeEmColor); font-size: 10px; line-height: 1.35; }
+#mari-token-receipt .tr-settings-title { margin: 0 0 5px; font-size: 13px; }
+#mari-token-receipt .tr-settings-actions { display: flex; gap: 7px; margin-top: 10px; }
+#mari-token-receipt .tr-help h3 { margin: 0 0 8px; font-size: 13px; }
+#mari-token-receipt .tr-help h4 { margin: 12px 0 4px; font-size: 12px; }
+#mari-token-receipt .tr-help ol, #mari-token-receipt .tr-help ul { margin: 4px 0; padding-left: 18px; }
+#mari-token-receipt .tr-help li { margin: 5px 0; }
+#mari-token-receipt code { font-size: 11px; word-break: break-all; }
+#mari-token-receipt .tr-help-note { margin-top: 10px; padding: 8px; border: 1px solid var(--SmartThemeBorderColor); border-radius: 8px; background: var(--black30a, rgba(0,0,0,.3)); }
+#mari-token-receipt .tr-warn { color: #f5b84b; margin-top: 8px; }
+#mari-token-receipt .tr-error { color: #ff6b9d; }
+#mari-token-receipt .tr-tier { margin: 7px 0 3px; padding: 7px 8px; border: 1px solid rgba(245,184,75,.38); border-radius: 8px; background: rgba(245,184,75,.08); color: #f5c66d; font-weight: 650; }
+
+@media (max-width: 520px) {
+  #mari-token-receipt { left: 12px !important; right: 12px !important; bottom: calc(12px + env(safe-area-inset-bottom)) !important; top: auto !important; width: auto; max-height: 70vh; }
+}
